@@ -1,0 +1,29 @@
+
+<%- include('parts/header') %>
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col"><a href="" class="btn btn-info">Update</a></th>
+            <th scope="col"><a href="" class="btn btn-danger">Delete</a></th>
+        </tr>
+        <%mydata.forEach ((user)=>{%>
+            <tr>
+                <th scope="col"><%- user.id%></th>
+                <th scope="col"><%- user.name%></th>
+                <th scope="col"><%- user.email%></th>
+                <th scope="col"><%- user.phone%></th>
+                <th scope="col"><a href="/edit/<%- user._id%>" class="btn btn-info">Update</a></th>
+                <th scope="col"><a href="/delete/<%- user._id%>" class="btn btn-danger">Delete</a></th>
+            </tr>
+       <% })%>
+    </table>
+</div>
+
+
+<%- include('parts/footer') %>

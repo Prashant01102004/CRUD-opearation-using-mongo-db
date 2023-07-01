@@ -1,0 +1,21 @@
+<%- include('parts/header') %>
+<div class="conatiner">
+<form method="post" action="/update/<%- updatedata._id %>">
+    <h1>updateform</h1>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" name='name' id="exampleInputEmail1" aria-describedby="emailHelp" value="<%- updatedata.name%>">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Email</label>
+      <input type="email" class="form-control" name='email' id="exampleInputPassword1" value="<%- updatedata.email%>">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Phone</label>
+        <input type="number" class="form-control" name='phone' id="exampleInputPassword1" value="<%- updatedata.phone%>">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>   
+</div>
+
+  <%- include('parts/footer') %>
